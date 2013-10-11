@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Operatori", "Capitolo4\Operatori.csproj", "{27C0C884-49F7-43E4-8BC3-A06875ADCD49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumericPromotions", "NumericPromotions\NumericPromotions.csproj", "{5E401F35-141E-4F34-935A-F057DC451A61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckedUnchecked", "CheckedUnchecked\CheckedUnchecked.csproj", "{ABAD7335-46AC-4AC7-8B6E-97F5AE1FA0E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TypeOperators", "TypeOperators\TypeOperators.csproj", "{B0743BC9-2BFE-4A06-BEFE-E34945DC5059}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{27C0C884-49F7-43E4-8BC3-A06875ADCD49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27C0C884-49F7-43E4-8BC3-A06875ADCD49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27C0C884-49F7-43E4-8BC3-A06875ADCD49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27C0C884-49F7-43E4-8BC3-A06875ADCD49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E401F35-141E-4F34-935A-F057DC451A61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E401F35-141E-4F34-935A-F057DC451A61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E401F35-141E-4F34-935A-F057DC451A61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E401F35-141E-4F34-935A-F057DC451A61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABAD7335-46AC-4AC7-8B6E-97F5AE1FA0E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABAD7335-46AC-4AC7-8B6E-97F5AE1FA0E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABAD7335-46AC-4AC7-8B6E-97F5AE1FA0E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABAD7335-46AC-4AC7-8B6E-97F5AE1FA0E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0743BC9-2BFE-4A06-BEFE-E34945DC5059}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0743BC9-2BFE-4A06-BEFE-E34945DC5059}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0743BC9-2BFE-4A06-BEFE-E34945DC5059}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0743BC9-2BFE-4A06-BEFE-E34945DC5059}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

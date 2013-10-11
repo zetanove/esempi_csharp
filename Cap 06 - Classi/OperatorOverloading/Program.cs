@@ -1,0 +1,37 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace OperatorOverloading
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            ComplexNumber z1 = new ComplexNumber(2, 4);
+            ComplexNumber z2 = new ComplexNumber(3, -2);
+            ComplexNumber somma = z1 + z2;
+
+            ComplexNumber sommaint = 10 + z1;
+            
+            if (somma)
+            {
+                Console.WriteLine("La somma ha parte reale o immaginaria diverse da zero");
+            }
+            else Console.WriteLine("somma nulla");
+
+            if (z1 > z2)
+            {
+                Console.WriteLine("{0}>{1}", z1, z2);
+            }
+
+            int num = 1;
+            double d = 1;
+            ComplexNumber zd = (ComplexNumber)d;
+
+            int[] array = zd;
+        }
+    }
+}
