@@ -94,6 +94,19 @@ namespace XPath_TEst
                 Console.WriteLine(element.OuterXml);
             }
 
+            //seleziona tutti gli elementi <marca> e tutti gli elementi <modello> contenuti in un elemento <veicolo>
+            results = nav.Select("//veicolo/marca | //veicolo/modello"); 
+            foreach (XPathNavigator element in results)
+            {
+                Console.WriteLine(element.OuterXml);
+            }
+
+            //selezione gli elementi <veicolo> con sottoelementi marca e modello ma senza alimentazione
+            results = nav.Select("//veicolo[marca and modello and not(alimentazione)]");
+            foreach (XPathNavigator element in results)
+            {
+                Console.WriteLine(element.OuterXml);
+            }
 
             var firstVeicolo = nav.SelectSingleNode("./veicolo[1]"); //seleziona tutti i figli <veicolo>
             Console.WriteLine(firstVeicolo.OuterXml);
