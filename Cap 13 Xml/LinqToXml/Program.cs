@@ -23,10 +23,21 @@ namespace LinqToXml
                         )
                     )
                 );
-
             xdoc.Save("xfile.xml");
             //Debug.WriteLine(xdoc);
             Console.WriteLine(xdoc);
+
+            XNamespace ns = "http://www.mionamespace.it";
+            
+            XElement root = new XElement(ns + "veicoli", new XAttribute(XNamespace.Xmlns+"nv", ns),
+                new XElement(ns + "veicolo")
+            );
+            Console.WriteLine(root);
+
+            root = new XElement("root",
+                new XComment("commento di prova")
+            );
+            Console.WriteLine(root);
 
             var veicoli=GetVeicoli();
             var xmlVeicoli = new XElement("veicoli", from v in veicoli
