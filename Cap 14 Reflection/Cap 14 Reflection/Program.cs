@@ -43,7 +43,7 @@ namespace Cap_14_Reflection
             Console.WriteLine( arrayInt.GetType().FullName);
 
 
-            
+            Console.ReadLine();
         }
     }
 }
