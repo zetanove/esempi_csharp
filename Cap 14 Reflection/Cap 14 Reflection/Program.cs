@@ -102,23 +102,84 @@ namespace Cap_14_Reflection
             Console.WriteLine(tgen.IsGenericType);
             Console.WriteLine(tgen.IsGenericTypeDefinition);
             Console.WriteLine(tgen.ContainsGenericParameters);
-
+            
             Console.WriteLine("Dictionary<,>");
             tgen = typeof(Dictionary<, >);
             Console.WriteLine(tgen.IsGenericType);
             Console.WriteLine(tgen.IsGenericTypeDefinition);
             Console.WriteLine(tgen.ContainsGenericParameters);
 
+            Console.WriteLine("base type e interfaces");
+            Type exType = typeof(ArgumentException);
+            Type bt = exType.BaseType;
+            bool subclass=exType.IsSubclassOf(bt);
+            bool isAssignable=bt.IsAssignableFrom(exType);
+            Console.WriteLine(bt.Name);
+
+            Type[] interfaces=  exType.GetInterfaces();
+            interfaces.ToList().ForEach(i => Console.WriteLine(i.Name));
+
+            Console.WriteLine("Assembly e moduli");
+
+            Console.WriteLine(tx.Assembly.FullName);
+            Console.WriteLine(tx.Module.Name);
+           
+
             Console.WriteLine("string methods");
             ts = typeof(String);
             MethodInfo[] methods = ts.GetMethods();
+            List<string> pars=new List<string>();
             foreach (MethodInfo mi in methods)
             {
-                Console.WriteLine("{0} {1}", mi.ReturnType.Name, mi.Name);
+                pars=new List<string>();
+                foreach (ParameterInfo par in mi.GetParameters())
+                {
+                    pars.Add(String.Format("{0} {1},", par.ParameterType.Name, par.Name));
+                }
+                Console.WriteLine("{0} {1}({2})", mi.ReturnType.Name, mi.Name, string.Join(",", pars.ToArray()));
+            }
+
+            var query = from m in methods
+                        where m.GetParameters().Any()
+                        select String.Format("{0} {1}", m.ReturnType, m.Name);
+
+            foreach (var q in query)
+            {
+                Console.WriteLine(q.ToString());
+            }
+
+            Console.WriteLine("non public methods");
+            query = from m in typeof(string).GetMethods(BindingFlags.Instance | BindingFlags.NonPublic)
+                        select String.Format("{0} {1}", m.ReturnType, m.Name);
+
+            foreach (var q in query)
+            {
+                Console.WriteLine(q.ToString());
+            }
+
+
+            MemberInfo[] members = typeof(int).GetMembers(BindingFlags.Static|BindingFlags.Public);
+            foreach (MemberInfo member in members)
+            {
+                Console.WriteLine("{0} {1}", member.MemberType, member.Name);
             }
             
-            Console.ReadLine();
+            IEnumerable<ConstructorInfo> constructors= typeof(Container).GetTypeInfo().DeclaredConstructors;
+            constructors.ToList().ForEach(Console.WriteLine);
+
+
+            MethodInfo method = typeof(Container).GetMethod("MyMethod", new Type[]{typeof(int)});
+
+
+            ts= typeof(string);
+            PropertyInfo pi=ts.GetProperty("Length");
+            int result=(int)pi.GetValue("abc");
             
+            Type[] parTypes=new Type[]{typeof(string)};
+            MethodInfo mIndexOf=ts.GetMethod("IndexOf", parTypes);
+            int index=(int)mIndexOf.Invoke("abc", new object[]{"b"});
+            Console.ReadLine();
+
 
         }
     }
@@ -127,6 +188,22 @@ namespace Cap_14_Reflection
     {
         class Container
         {
+            private Container()
+            {
+            }
+
+            public Container(int i)
+            {
+            }
+
+            public void MyMethod()
+            {
+            }
+
+            public void MyMethod(int i)
+            {
+            }
+
             public class Nested
             {
                 Nested() { }
