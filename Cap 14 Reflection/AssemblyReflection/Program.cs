@@ -45,6 +45,7 @@ namespace AssemblyReflection
             Test test=(Test)Activator.CreateInstance(t, "name");
 
             Test test2 = Activator.CreateInstance<Test>();
+
         }
     }
 }

@@ -178,6 +178,15 @@ namespace Cap_14_Reflection
             Type[] parTypes=new Type[]{typeof(string)};
             MethodInfo mIndexOf=ts.GetMethod("IndexOf", parTypes);
             int index=(int)mIndexOf.Invoke("abc", new object[]{"b"});
+
+            Console.WriteLine("ref out parameters");
+            Type[] intParseTypes = new Type[] { typeof(string), typeof(int).MakeByRefType() };
+            MethodInfo tryParse = typeof(int).GetMethod("TryParse", intParseTypes);
+            object[] arguments={"123", null};
+            bool parseOk = (bool)tryParse.Invoke(null, arguments);
+            if (parseOk)
+                Console.WriteLine(arguments[1]);
+
             Console.ReadLine();
 
 
