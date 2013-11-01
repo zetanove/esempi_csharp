@@ -27,9 +27,11 @@ namespace AssemblyReflection
         static void Main(string[] args)
         {
             Assembly assm = Assembly.GetExecutingAssembly();
+            AssemblyName name = assm.GetName();
+            Console.WriteLine("name {0} version {1}",name.Name, name.Version);
             assm = Assembly.GetAssembly(typeof(string));
             Console.WriteLine(assm.FullName);
-
+            
             assm= typeof(string).Assembly;
             Console.WriteLine(assm.FullName);
 
