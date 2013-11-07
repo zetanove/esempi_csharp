@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cap 15 Accesso ai dati", "Cap 15 Accesso ai dati\Cap 15 Accesso ai dati.csproj", "{03DBD54B-5DD1-4821-80D5-E50A2404BE07}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileSystem", "Cap 15 Accesso ai dati\FileSystem.csproj", "{03DBD54B-5DD1-4821-80D5-E50A2404BE07}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileMonitor", "FileMonitor\FileMonitor.csproj", "{A691E645-DA36-4AE2-B815-67309D17F6A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Streams", "Streams\Streams.csproj", "{C7ABDC2D-4101-4716-9179-DECF6FD5D2D7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{03DBD54B-5DD1-4821-80D5-E50A2404BE07}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03DBD54B-5DD1-4821-80D5-E50A2404BE07}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03DBD54B-5DD1-4821-80D5-E50A2404BE07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A691E645-DA36-4AE2-B815-67309D17F6A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A691E645-DA36-4AE2-B815-67309D17F6A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A691E645-DA36-4AE2-B815-67309D17F6A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A691E645-DA36-4AE2-B815-67309D17F6A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7ABDC2D-4101-4716-9179-DECF6FD5D2D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7ABDC2D-4101-4716-9179-DECF6FD5D2D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7ABDC2D-4101-4716-9179-DECF6FD5D2D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7ABDC2D-4101-4716-9179-DECF6FD5D2D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
