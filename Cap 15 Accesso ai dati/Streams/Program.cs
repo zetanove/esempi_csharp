@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace Streams
 {
@@ -69,6 +70,124 @@ namespace Streams
             }
 
 
+            //FileStream
+            string path="c:\\temp\\filestream.txt";
+            using(FileStream fs = File.Open(path, FileMode.OpenOrCreate, FileAccess.ReadWrite))
+            {
+                fs.WriteByte(1);
+            }
+
+            using (FileStream fs = File.OpenRead(path))
+            {
+                int i=fs.ReadByte();
+            }
+
+            //async
+            AsyncWriteOp();
+
+
+            using (MemoryStream ms = new MemoryStream())
+            {
+                using (FileStream file = new FileStream("c:\\temp\\test.jpg", FileMode.OpenOrCreate, FileAccess.ReadWrite))
+                {
+                    byte[] filebuffer = new byte[file.Length];
+                    file.Read(filebuffer, 0, (int)file.Length);
+                    ms.Write(filebuffer, 0, (int)file.Length);
+
+                    //processo i byte
+                    //...
+
+                    file.Position = 0;
+                    file.Write(filebuffer, 0, filebuffer.Length);
+                }
+            }
+
+            using (StreamReader reader = new StreamReader(path, Encoding.ASCII))
+            {
+                reader.ReadLine();
+            }
+
+            using(StreamReader sr1= File.OpenText(path))
+            {
+                string line;
+                while( (line=sr1.ReadLine())!=null)
+                {
+                    Console.WriteLine(line);
+                }
+            }
+
+            using (StreamReader sr2 = File.OpenText(path))
+            {
+                int ch;
+                while ((ch = sr2.Read()) != -1)
+                {
+                    Console.WriteLine((char)ch);
+                }
+            }
+
+            using(StreamWriter writer=new StreamWriter(path, true, Encoding.UTF8))
+            {
+                writer.WriteLine(1);
+                writer.WriteLine(true);
+                writer.WriteLine("hello");
+            }
+
+            FileInfo fi = new FileInfo(path);
+            using(StreamWriter writer=fi.AppendText())
+            {
+                writer.WriteLine(1);
+                writer.WriteLine(true);
+                writer.WriteLine("hello");
+            }
+            string str="abcdefgh";
+            StringReader strReader = new StringReader("abcdefgh");
+            
+            string xmlString="<node></node>";
+            var xmlReader= XmlReader.Create(new StringReader(xmlString));
+            xmlReader.Read();
+
+            FileStream binFs=File.OpenWrite("c:\\temp\\file.dat");
+            BinaryWriter bw = new BinaryWriter(binFs);
+            
+            bool booleano=true;
+            int intero=234;
+            string stringa="hello";
+            bw.Write(booleano);
+            bw.Write(intero);
+            bw.Write(stringa);
+
+            bw.Close();
+
+            using(BinaryReader br=new BinaryReader(File.OpenRead("c:\\temp\\file.dat")))
+            {
+                booleano = br.ReadBoolean();
+                intero = br.ReadInt32();
+                stringa = br.ReadString();
+            }
+
+            Stream streamb=File.OpenRead("c:\\temp\\file.dat");
+            using (BinaryReader br = new BinaryReader(streamb))
+            {
+                byte[] allBytes=br.ReadBytes((int)streamb.Length);
+            }
+        }
+
+
+        private static async void AsyncWriteOp()
+        {
+            byte[] buffer = new byte[100000];
+            Random rnd=new Random();
+            rnd.NextBytes(buffer);
+
+            string path="c:\\temp\\asyncfile.txt";
+            using (FileStream fs = File.Open(path, FileMode.OpenOrCreate, FileAccess.ReadWrite))
+            {
+                await fs.WriteAsync(buffer, 0, 1000);
+                fs.Seek(0, SeekOrigin.Begin);
+
+                byte[] readbuffer = new byte[100];
+                int readBytes= await fs.ReadAsync(readbuffer, 0, 100);
+            }
         }
     }
 }
