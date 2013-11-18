@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileMonitor", "FileMonitor\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Streams", "Streams\Streams.csproj", "{C7ABDC2D-4101-4716-9179-DECF6FD5D2D7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADONet", "ADONet\ADONet.csproj", "{14EFED28-C948-4D0A-A3BC-9EAA60A893CF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{C7ABDC2D-4101-4716-9179-DECF6FD5D2D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7ABDC2D-4101-4716-9179-DECF6FD5D2D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7ABDC2D-4101-4716-9179-DECF6FD5D2D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14EFED28-C948-4D0A-A3BC-9EAA60A893CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14EFED28-C948-4D0A-A3BC-9EAA60A893CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14EFED28-C948-4D0A-A3BC-9EAA60A893CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14EFED28-C948-4D0A-A3BC-9EAA60A893CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
