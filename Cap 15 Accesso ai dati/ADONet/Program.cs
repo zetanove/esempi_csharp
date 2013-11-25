@@ -68,8 +68,6 @@ namespace ADONet
                     }
                 }
 
-                
-
                 SqlCommand cmdXml = new SqlCommand("SELECT TOP 5 ProductID, Name, Color FROM SalesLT.Product FOR XML AUTO, XMLDATA", connection);
                 XmlReader xmlReader = cmdXml.ExecuteXmlReader();
                 while(xmlReader.Read())

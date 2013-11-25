@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Streams", "Streams\Streams.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADONet", "ADONet\ADONet.csproj", "{14EFED28-C948-4D0A-A3BC-9EAA60A893CF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoDisconnected", "AdoDisconnected\AdoDisconnected.csproj", "{1EBE7688-ED3A-4382-893F-0250A9311ECD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductsViewer", "ProductsViewer\ProductsViewer.csproj", "{1DDB025D-E1E3-4F71-BC4A-122B596E477D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{14EFED28-C948-4D0A-A3BC-9EAA60A893CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14EFED28-C948-4D0A-A3BC-9EAA60A893CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14EFED28-C948-4D0A-A3BC-9EAA60A893CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EBE7688-ED3A-4382-893F-0250A9311ECD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EBE7688-ED3A-4382-893F-0250A9311ECD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EBE7688-ED3A-4382-893F-0250A9311ECD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EBE7688-ED3A-4382-893F-0250A9311ECD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DDB025D-E1E3-4F71-BC4A-122B596E477D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DDB025D-E1E3-4F71-BC4A-122B596E477D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DDB025D-E1E3-4F71-BC4A-122B596E477D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DDB025D-E1E3-4F71-BC4A-122B596E477D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
