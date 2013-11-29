@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'D:\dev\esempi_csharp\Cap 15 Accesso ai dati\EntityFramework\AdventureWorksModel.edmx'. 
+﻿// T4 code generation is enabled for model 'D:\dev\esempi_csharp\Cap 15 Accesso ai dati\EFModelFirst\CarModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
