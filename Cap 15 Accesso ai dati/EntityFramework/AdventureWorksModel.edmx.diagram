@@ -4,17 +4,23 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="922d83e5a6c54aa79dee6e617e691ae6" Name="Diagram1" ZoomLevel="74">
+      <Diagram DiagramId="91d31b0a792a4779a4184ee4a9f3f970" Name="Diagram1">
+        <EntityTypeShape EntityType="AdventureWorksLT2012Model.ErrorLog" Width="1.5" PointX="2.75" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorksLT2012Model.sysdiagrams" Width="1.5" PointX="8.75" PointY="2.75" IsExpanded="true" />
         <EntityTypeShape EntityType="AdventureWorksLT2012Model.Address" Width="1.5" PointX="0.75" PointY="6.25" IsExpanded="true" />
         <EntityTypeShape EntityType="AdventureWorksLT2012Model.Customer" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="AdventureWorksLT2012Model.CustomerAddress" Width="1.5" PointX="3" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="AdventureWorksLT2012Model.Product" Width="1.5" PointX="2.75" PointY="10.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="AdventureWorksLT2012Model.ProductCategory" Width="1.5" PointX="0.5" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorksLT2012Model.Product" Width="1.5" PointX="6" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorksLT2012Model.ProductCategory" Width="1.5" PointX="3.75" PointY="12" IsExpanded="true" />
         <EntityTypeShape EntityType="AdventureWorksLT2012Model.ProductDescription" Width="1.5" PointX="3.75" PointY="18.5" IsExpanded="true" />
         <EntityTypeShape EntityType="AdventureWorksLT2012Model.ProductModel" Width="1.5" PointX="3.75" PointY="15.375" IsExpanded="true" />
         <EntityTypeShape EntityType="AdventureWorksLT2012Model.ProductModelProductDescription" Width="1.5" PointX="6" PointY="18.375" IsExpanded="true" />
         <EntityTypeShape EntityType="AdventureWorksLT2012Model.SalesOrderDetail" Width="1.5" PointX="8.25" PointY="6.375" IsExpanded="true" />
         <EntityTypeShape EntityType="AdventureWorksLT2012Model.SalesOrderHeader" Width="1.5" PointX="6" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorksLT2012Model.BuildVersion" Width="1.5" PointX="0.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorksLT2012Model.vGetAllCategories" Width="1.5" PointX="8.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorksLT2012Model.vProductAndDescription" Width="1.5" PointX="10.75" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorksLT2012Model.vProductModelCatalogDescription" Width="1.5" PointX="10.75" PointY="5.75" IsExpanded="true" />
         <AssociationConnector Association="AdventureWorksLT2012Model.FK_CustomerAddress_Address_AddressID" ManuallyRouted="false" />
         <AssociationConnector Association="AdventureWorksLT2012Model.FK_SalesOrderHeader_Address_BillTo_AddressID" ManuallyRouted="false" />
         <AssociationConnector Association="AdventureWorksLT2012Model.FK_SalesOrderHeader_Address_ShipTo_AddressID" ManuallyRouted="false" />
