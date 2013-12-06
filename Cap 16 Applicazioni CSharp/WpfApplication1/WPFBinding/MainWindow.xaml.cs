@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfApplication1
+namespace WPFBinding
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -23,11 +23,28 @@ namespace WpfApplication1
         public MainWindow()
         {
             InitializeComponent();
+
+            this.DataContext = GenerateData();
+           
         }
 
-        private void bt_Click(object sender, RoutedEventArgs e)
+        private List<Customer> GenerateData()
         {
-            MessageBox.Show("Hello WPF");
+            List<Customer> clienti = new List<Customer>();
+            clienti.Add(new Customer() { Name = "Antonio" });
+            clienti.Add(new Customer() { Name = "John" });
+            clienti.Add(new Customer() { Name = "James" });
+            clienti.Add(new Customer() { Name = "Bill" });
+            clienti.Add(new Customer() { Name = "Matthew" });
+
+            return clienti;
         }
     }
+
+    public class Customer
+    {
+        public string Name { get; set; }
+    }
+
+
 }
