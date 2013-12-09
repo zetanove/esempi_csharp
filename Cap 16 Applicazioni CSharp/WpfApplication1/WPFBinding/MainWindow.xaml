@@ -3,18 +3,31 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
+        <Grid.Resources>
+            <BooleanToVisibilityConverter x:Key="boolToVis" />
+        </Grid.Resources>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="269*"/>
+            <ColumnDefinition Width="248*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="50*"/>
-            <RowDefinition Height="300*"/>
+            <RowDefinition Height="23*"/>
+            <RowDefinition Height="21*"/>
+            <RowDefinition Height="116*"/>
         </Grid.RowDefinitions>
-        <TextBlock Text="{Binding Path=Name}"></TextBlock>
-        <ListBox Name="lista" HorizontalAlignment="Left" Height="174" Margin="10,10,0,0" VerticalAlignment="Top" Width="139" ItemsSource="{Binding}" Grid.Row="1">
+        <TextBlock Text="{Binding Path=Name}" Grid.ColumnSpan="2"></TextBlock>
+        <ListBox Name="lista" HorizontalAlignment="Left" Height="174" Margin="10,10,0,0" VerticalAlignment="Top" Width="139" ItemsSource="{Binding}" Grid.Row="1" Grid.RowSpan="2">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <TextBlock Text="{Binding Path=Name}" Foreground="Black"></TextBlock>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
+        <CheckBox x:Name="chkShowDetails" Content="Show Details" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2"/>
+        <StackPanel x:Name="detailsPanel" Grid.Column="1" Grid.Row="2" Background="Yellow"
+                Visibility="{Binding IsChecked, ElementName=chkShowDetails, 
+                             Converter={StaticResource boolToVis}}" >
+        </StackPanel>
 
     </Grid>
 </Window>

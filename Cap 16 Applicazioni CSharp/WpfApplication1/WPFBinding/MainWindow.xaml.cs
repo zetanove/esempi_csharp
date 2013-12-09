@@ -25,7 +25,6 @@ namespace WPFBinding
             InitializeComponent();
 
             this.DataContext = GenerateData();
-           
         }
 
         private List<Customer> GenerateData()
