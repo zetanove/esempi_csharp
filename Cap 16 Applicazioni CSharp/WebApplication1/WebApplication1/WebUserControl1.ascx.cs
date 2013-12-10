@@ -7,16 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace WebApplication1
 {
-    public partial class Default : System.Web.UI.Page
+    public partial class WebUserControl1 : System.Web.UI.UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           
-        }
 
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            Label1.Text = "Hello ASP.NET";
         }
     }
 }
