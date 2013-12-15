@@ -133,6 +133,9 @@ namespace AppendiceA_Strings
             builder.AppendFormat("{0}: {1}", "prova", 123);
 
             //Regex
+            string frase = "abc def ghi";
+
+
             string pattern=@"\d{2}";
             string input="oggi ci sono 25 gradi";
             Regex rex=new Regex(pattern);
@@ -140,10 +143,21 @@ namespace AppendiceA_Strings
             if(match.Success)
             {
                 Console.WriteLine(match.Value);
+                Console.WriteLine(match.Index);
+                Console.WriteLine(match.Length);
             }
 
+            MatchCollection matches = Regex.Matches(input, "i");
+            Console.WriteLine("trovate {0} corrispondenze di 'i' in {1}", matches.Count, input);
+            foreach(Match m in matches)
+            {
+                Console.WriteLine("indice {0}", m.Index);
+            }
+
+            
             match= Regex.Match(input, pattern, RegexOptions.Multiline| RegexOptions.IgnoreCase);
             
+
             input = "La stringa attuale contiene più parole di lunghezza due";
             pattern= @"\b\w{2}\b";
             var risultati= Regex.Matches(input, pattern, RegexOptions.IgnoreCase);
@@ -152,6 +166,65 @@ namespace AppendiceA_Strings
                 Console.WriteLine(m.Value);
             }
 
+            //escape
+            input = "Come ti chiami?";
+            pattern = @"chiami?";
+            pattern = Regex.Escape(pattern);
+            match = Regex.Match(input, pattern);
+            if(match.Success)
+            {
+                Console.WriteLine(match.Value);
+            }
+
+            input = "hello antonio";
+            pattern = "[abcde]";
+            matches  = Regex.Matches(input, pattern);
+            foreach(Match m in matches)
+                Console.WriteLine("at {0}: {1}",m.Index, m.Value);
+
+            input = "a1 h1 b2 h2";
+            pattern = @"[a-f]\d";
+            matches = Regex.Matches(input, pattern);
+            foreach (Match m in matches)
+                Console.WriteLine("at {0}: {1}", m.Index, m.Value);//a1 b2
+
+            input = "98065 123 abc 9210";
+            pattern = @"\d{5}";
+            matches = Regex.Matches(input, pattern);
+            foreach (Match m in matches)
+                Console.WriteLine("at {0}: {1}", m.Index, m.Value);//98065
+
+
+            pattern = @"(\+\d{2})-(\d{3}-\d{4})";
+            input = "In questa stringa ci sono dei numeri 212-555-6666 +39-932-1111 +415-222-3333 +01-888-9999 alcuni dei quali sono telefoni con prefisso";
+            matches = Regex.Matches(input, pattern);
+
+            foreach (Match mn in matches)
+            {
+                Console.WriteLine("Prefisso nazione:        {0}", mn.Groups[1].Value);
+                Console.WriteLine("numero tel.: {0}", mn.Groups[2].Value);
+                Console.WriteLine();
+            }
+            Console.WriteLine();
+
+            pattern = @"(\w+)\s(\1)";
+            input = "In questa frase frase ci sono sono delle parole ripetute";
+            foreach (Match mr in Regex.Matches(input, pattern, RegexOptions.IgnoreCase))
+                Console.WriteLine("Duplicato '{0}'", mr.Groups[1].Value);
+
+            pattern = @"(?<dup>\w+)\s(\k<dup>)";
+            input = "In questa frase frase ci sono sono delle parole ripetute";
+            foreach (Match mr in Regex.Matches(input, pattern, RegexOptions.IgnoreCase))
+                Console.WriteLine("Duplicato '{0}'", mr.Groups["dup"].Value);
+
+            input = "Questa stringa  ha   troppi spazi    bianchi   ";
+            pattern = "\\s+";
+            string replacement = " ";
+            Regex rgx = new Regex(pattern);
+            string result = rgx.Replace(input, replacement);
+
+            Console.WriteLine("Originale: {0}", input);
+            Console.WriteLine("Dopo sostituzione: {0}", result);  
         }
     }
 }
