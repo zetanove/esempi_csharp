@@ -224,7 +224,27 @@ namespace AppendiceA_Strings
             string result = rgx.Replace(input, replacement);
 
             Console.WriteLine("Originale: {0}", input);
-            Console.WriteLine("Dopo sostituzione: {0}", result);  
+            Console.WriteLine("Dopo sostituzione: {0}", result);
+
+            input = "una frase tutta in minuscolo";
+            result= Regex.Replace(input, @"\b[a-z]\w+", delegate(Match matchToEval)
+                {
+                    string v = matchToEval.ToString();
+                    return char.ToUpper(v[0]) + v.Substring(1);
+                });
+            Console.WriteLine("Originale: {0}", input);
+            Console.WriteLine("Dopo sostituzione: {0}", result);
+
+            input = "12/31/2014";
+            pattern = @"\b(\d{1,2})\/(\d{1,2})\/(\d{2,4})";
+            replacement="$2-$1-$3";
+            result = Regex.Replace(input, pattern, replacement);
+            Console.WriteLine("{0} convertita in {1}", input, result);
+
+            pattern = @"\b(?<mese>\d{1,2})\/(?<giorno>\d{1,2})\/(?<anno>\d{2,4})";
+            replacement = "${giorno}-${mese}-${anno}";
+            result = Regex.Replace(input, pattern, replacement);
+            Console.WriteLine("{0} convertita in {1}", input, result);
         }
     }
 }
