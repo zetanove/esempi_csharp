@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCodeFirstLibrary", "EFCod
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCodeFirstApp", "EFCodeFirstApp\EFCodeFirstApp.csproj", "{5F59962D-5275-4524-B080-DFC66C8A3250}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IsolatedStorageSample", "IsolatedStorageSample\IsolatedStorageSample.csproj", "{F4EACBE3-3770-4419-A4A9-34C97667DDF3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{5F59962D-5275-4524-B080-DFC66C8A3250}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F59962D-5275-4524-B080-DFC66C8A3250}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F59962D-5275-4524-B080-DFC66C8A3250}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4EACBE3-3770-4419-A4A9-34C97667DDF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4EACBE3-3770-4419-A4A9-34C97667DDF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4EACBE3-3770-4419-A4A9-34C97667DDF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4EACBE3-3770-4419-A4A9-34C97667DDF3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

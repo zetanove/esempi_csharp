@@ -29,8 +29,12 @@ namespace OperatorOverloading
 
             int num = 1;
             double d = 1;
+            //conversione esplicita da double a ComplexNumber
             ComplexNumber zd = (ComplexNumber)d;
+            //conversione esplicita da ComplexNumber a int
+            int real = (int)zd;
 
+            //conversione implicita da ComplexNumber a int
             int[] array = zd;
         }
     }

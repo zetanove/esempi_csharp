@@ -76,6 +76,12 @@ namespace OperatorOverloading
             return new ComplexNumber(d, 0);
         }
 
+        public static explicit operator int(ComplexNumber d)
+        {
+            return d.real;
+        }
+
+
         public static implicit operator int[](ComplexNumber z)
         {
             return new int[]{z.real, z.imaginary};
