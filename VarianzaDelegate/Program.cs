@@ -37,7 +37,7 @@ namespace VarianzaDelegate
 
 
 
-        static void Main()
+        static void Main(object[] args)
         {
             MioDelegate<int, string> del = MioMetodo;
             int i = del.Invoke("1");

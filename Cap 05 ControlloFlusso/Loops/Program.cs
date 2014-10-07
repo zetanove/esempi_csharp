@@ -28,6 +28,7 @@ namespace Loops
                     break;
             }
 
+            i = 0;
             while (i < 10)
             {
                 if (i % 2 == 0)
@@ -35,7 +36,7 @@ namespace Loops
                     i++;
                     continue;
                 }
-                Console.WriteLine("i={0}", i);
+                Console.WriteLine("i={0}", i++);
             }
 
             //do while
