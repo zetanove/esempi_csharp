@@ -22,21 +22,21 @@ namespace Operatori
             bool f = false;
 
             Console.WriteLine("operatore AND (&)");
-            Console.WriteLine("{0} & {1} = {2}", t, f, f & f);
+            Console.WriteLine("{0} & {1} = {2}", f, f, f & f);
             Console.WriteLine("{0} & {1} = {2}", f, t, f & t);
             Console.WriteLine("{0} & {1} = {2}", t, f, t & f);
             Console.WriteLine("{0} & {1} = {2}", t, t, t & t);
             Console.WriteLine();
 
             Console.WriteLine("operatore OR (|)");
-            Console.WriteLine("{0} | {1} = {2}", t, f, f | f);
+            Console.WriteLine("{0} | {1} = {2}", f, f, f | f);
             Console.WriteLine("{0} | {1} = {2}", f, t, f | t);
             Console.WriteLine("{0} | {1} = {2}", t, f, t | f);
             Console.WriteLine("{0} | {1} = {2}", t, t, t | t);
             Console.WriteLine();
 
             Console.WriteLine("operatore XOR (^)");
-            Console.WriteLine("{0} ^ {1} = {2}", t, f, f ^ f);
+            Console.WriteLine("{0} ^ {1} = {2}", f, f, f ^ f);
             Console.WriteLine("{0} ^ {1} = {2}", f, t, f ^ t);
             Console.WriteLine("{0} ^ {1} = {2}", t, f, t ^ f);
             Console.WriteLine("{0} ^ {1} = {2}", t, t, t ^ t);
