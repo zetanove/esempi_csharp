@@ -26,7 +26,7 @@ namespace Capitolo5_ControlloFlusso
             {
                 Console.WriteLine("Tutti pari");
             }
-            Console.WriteLine("Non sono tutti pari");
+            else Console.WriteLine("Non sono tutti pari");
 
             //operatore &&, non esegue la verifica di c, perchè ha trovato b dispari
             Console.WriteLine("verifica con &&");
@@ -34,7 +34,7 @@ namespace Capitolo5_ControlloFlusso
             {
                 Console.WriteLine("Tutti pari");
             }
-            Console.WriteLine("Non sono tutti pari");
+            else Console.WriteLine("Non sono tutti pari");
         }
     }
 }
