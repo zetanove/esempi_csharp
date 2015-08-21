@@ -19,7 +19,7 @@ namespace Cap7_Inheritance
 
     public class MyClass : IFoo, IWhatever
     {
-        public void Bar() //Explicit implementation
+        public void Bar() //standard implementation
         {
 
         }
@@ -29,18 +29,18 @@ namespace Cap7_Inheritance
 
         }
 
-        void IFoo.Bar()
+        void IFoo.Bar() //explicit implementation
         {
             Console.WriteLine("IFoo.Bar");
         }
 
 
-        void IWhatever.Bar()
+        void IWhatever.Bar() //explicit implementation
         {
             Console.WriteLine("IWhatever.Bar");
         }
 
-        void IWhatever.Method()
+        void IWhatever.Method() //explicit implementation
         {
             Console.WriteLine("IWhatever.Method");
         }
